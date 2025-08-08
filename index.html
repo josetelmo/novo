@@ -1,15 +1,256 @@
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:_dlc_DocId msdt:dt="string">TZZFMH4EWM2Y-2028058789-6288</mso:_dlc_DocId>
-<mso:_dlc_DocIdItemGuid msdt:dt="string">371eb3c6-4a22-44dd-b7a7-8e8e8cd60007</mso:_dlc_DocIdItemGuid>
-<mso:_dlc_DocIdUrl msdt:dt="string">https://fachaedu.sharepoint.com/sites/alunos/_layouts/15/DocIdRedir.aspx?ID=TZZFMH4EWM2Y-2028058789-6288, TZZFMH4EWM2Y-2028058789-6288</mso:_dlc_DocIdUrl>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-</head><body>
-<h1>
-Sejam bem-vindos ao seu primeiro site!
-</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batcave Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-bat"></i>
+                <h1>BATCAVE CONTROL PANEL</h1>
+            </div>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-label">STATUS:</span>
+                    <span class="status-value online">ONLINE</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">TIME:</span>
+                    <span class="status-value" id="current-time">--:--:--</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">BATMAN:</span>
+                    <span class="status-value active">ACTIVE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Left Panel - Surveillance -->
+            <section class="panel surveillance-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-eye"></i> SURVEILLANCE GRID</h2>
+                    <div class="panel-controls">
+                        <button class="control-btn active"><i class="fas fa-play"></i></button>
+                        <button class="control-btn"><i class="fas fa-pause"></i></button>
+                        <button class="control-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="surveillance-grid">
+                    <div class="camera-feed active">
+                        <div class="camera-overlay">
+                            <span class="camera-label">CAM-01</span>
+                            <span class="camera-status">LIVE</span>
+                        </div>
+                        <div class="camera-content">
+                            <div class="radar-scan"></div>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <div class="camera-overlay">
+                            <span class="camera-label">CAM-02</span>
+                            <span class="camera-status">LIVE</span>
+                        </div>
+                        <div class="camera-content">
+                            <div class="radar-scan"></div>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <div class="camera-overlay">
+                            <span class="camera-label">CAM-03</span>
+                            <span class="camera-status">LIVE</span>
+                        </div>
+                        <div class="camera-content">
+                            <div class="radar-scan"></div>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <div class="camera-overlay">
+                            <span class="camera-label">CAM-04</span>
+                            <span class="camera-status">LIVE</span>
+                        </div>
+                        <div class="camera-content">
+                            <div class="radar-scan"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center Panel - Main Controls -->
+            <section class="panel main-controls-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-cogs"></i> MAIN CONTROLS</h2>
+                </div>
+                <div class="controls-grid">
+                    <div class="control-module">
+                        <h3>VEHICLE STATUS</h3>
+                        <div class="vehicle-status">
+                            <div class="vehicle-item">
+                                <i class="fas fa-car"></i>
+                                <span>BATMOBILE</span>
+                                <div class="status-indicator ready"></div>
+                            </div>
+                            <div class="vehicle-item">
+                                <i class="fas fa-plane"></i>
+                                <span>BATWING</span>
+                                <div class="status-indicator ready"></div>
+                            </div>
+                            <div class="vehicle-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>BAT-POD</span>
+                                <div class="status-indicator ready"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-module">
+                        <h3>WEAPONS SYSTEMS</h3>
+                        <div class="weapons-grid">
+                            <button class="weapon-btn">
+                                <i class="fas fa-crosshairs"></i>
+                                <span>GRAPPLING HOOK</span>
+                            </button>
+                            <button class="weapon-btn">
+                                <i class="fas fa-bolt"></i>
+                                <span>ELECTROSHOCK</span>
+                            </button>
+                            <button class="weapon-btn">
+                                <i class="fas fa-smoke"></i>
+                                <span>SMOKE BOMBS</span>
+                            </button>
+                            <button class="weapon-btn">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>ARMOR PLATING</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="control-module">
+                        <h3>COMMUNICATIONS</h3>
+                        <div class="comms-panel">
+                            <div class="comms-item">
+                                <i class="fas fa-radio"></i>
+                                <span>POLICE SCANNER</span>
+                                <div class="status-indicator active"></div>
+                            </div>
+                            <div class="comms-item">
+                                <i class="fas fa-phone"></i>
+                                <span>BAT-SIGNAL</span>
+                                <div class="status-indicator active"></div>
+                            </div>
+                            <div class="comms-item">
+                                <i class="fas fa-satellite"></i>
+                                <span>SATELLITE LINK</span>
+                                <div class="status-indicator active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel - Data & Analytics -->
+            <section class="panel data-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-chart-line"></i> CRIME ANALYTICS</h2>
+                </div>
+                <div class="data-content">
+                    <div class="data-module">
+                        <h3>ACTIVE CASES</h3>
+                        <div class="case-list">
+                            <div class="case-item high-priority">
+                                <span class="case-id">CASE-001</span>
+                                <span class="case-title">JOKER ESCAPE</span>
+                                <span class="case-status">ACTIVE</span>
+                            </div>
+                            <div class="case-item medium-priority">
+                                <span class="case-id">CASE-002</span>
+                                <span class="case-title">PENGUIN SMUGGLING</span>
+                                <span class="case-status">INVESTIGATING</span>
+                            </div>
+                            <div class="case-item low-priority">
+                                <span class="case-id">CASE-003</span>
+                                <span class="case-title">RIDDLER PUZZLE</span>
+                                <span class="case-status">SOLVED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-module">
+                        <h3>GOTHAM STATS</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">CRIME RATE</span>
+                                <span class="stat-value">23.4%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">RESPONSE TIME</span>
+                                <span class="stat-value">2.3s</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">CITIZENS SAFE</span>
+                                <span class="stat-value">98.7%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">VIGILANTE EFFICIENCY</span>
+                                <span class="stat-value">94.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-module">
+                        <h3>SYSTEM MONITOR</h3>
+                        <div class="system-monitor">
+                            <div class="monitor-item">
+                                <span>CPU USAGE</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 67%"></div>
+                                </div>
+                                <span>67%</span>
+                            </div>
+                            <div class="monitor-item">
+                                <span>MEMORY</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <span>45%</span>
+                            </div>
+                            <div class="monitor-item">
+                                <span>NETWORK</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 89%"></div>
+                                </div>
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-item">
+                    <span>BATCAVE v2.1.0</span>
+                </div>
+                <div class="footer-item">
+                    <span>SECURE CONNECTION: ENCRYPTED</span>
+                </div>
+                <div class="footer-item">
+                    <span>LAST UPDATE: <span id="last-update">--:--:--</span></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
